@@ -140,9 +140,9 @@ def train_ULAE():
                     dice_total = []
                     print("\nValiding...")
                     for batch_idx, data in enumerate(valid_generator):
-                        X, X_label = data['image'].cuda(), data['label'].cuda()
+                        X, X_label = data['image'].cuda(), data['image_label'].cuda()
                         for batch_idx_fixed, data_fixed in enumerate(fixed_generator):
-                            Y, Y_label = data_fixed['image'].cuda(), data_fixed['label'].cuda()
+                            Y, Y_label = data_fixed['image'].cuda(), data_fixed['image_label'].cuda()
                             with torch.no_grad():
                                 X = X.float()
                                 Y = Y.float()
