@@ -57,10 +57,10 @@ def test():
     mi = MutualInformation()
     print("\nValiding...")
     for batch_idx, data in enumerate(valid_generator):
-        X, X_label = data['move'].to(device), data['move_label'].to(device)
+        X, X_label = data['image'].to(device), data['label'].to(device)
 
         for batch_idx_fixed, data_fixed in enumerate(fixed_generator):
-            Y, Y_label = data_fixed['move'].to(device), data_fixed['move_label'].to(device)
+            Y, Y_label = data_fixed['image'].to(device), data_fixed['label'].to(device)
 
             with torch.no_grad():
                 flows, warps, _ = model(X, Y)
