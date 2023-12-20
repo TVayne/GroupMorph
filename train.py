@@ -51,7 +51,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = opt.gpu
 
 imgshape = (160, 192, 192)
 groups = (4, 2, 2)  # (4,4,4), (4,4,2), (4,2,2) or (2,2,2)
-def train_ULAE():
+def train():
 
     model = GruopMorph(1, 8, imgshape, groups).cuda()
 
@@ -162,6 +162,6 @@ def train_ULAE():
 
 if __name__ == '__main__':
     start = datetime.datetime.now()
-    train_ULAE()
+    train()
     end = datetime.datetime.now()
     print("Time used:", end - start)
