@@ -22,7 +22,7 @@ By leveraging the inter-group correspondence, the synergy among deformation subf
 ## Training
 Step 1: Replace `../neurite-oasis.v1.0/OASIS_OAS1_*_MR1` with the path of your training data. You may also need to implement your own dataset function, i.e., `Dataset_OASIS` in `Functions.py`.
 
-Step 2: set the `groups` variable in `train.py` to set the groups of each level, and change the 'imgshape' to match the resolution of your data.
+Step 2: set the `groups` variable in `train.py` to set the groups of each level, and change the `imgshape` to match the resolution of your data.
 
 Step 3: You may adjust the size of the model by manipulating the argument `--bs_ch`, which is defaulted to 8.
 
