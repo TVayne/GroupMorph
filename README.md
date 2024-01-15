@@ -28,9 +28,9 @@ Step 3: You may adjust the size of the model by manipulating the argument `--bs_
 
 
 ## Testing
-Use this command to obtain the testing results.
+Use this command to obtain the quantitative results.
 ```python
-python test.py --bs_ch=8 --modelpath=/xx/xx/
+python test.py --modelpath=/xx/xx/
 ```
 ## Dataset
 We used four datasets to validate our methods:
