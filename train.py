@@ -18,6 +18,9 @@ parser.add_argument("--local_ori", type=float,
 parser.add_argument("--smooth", type=float,
                     dest="smooth", default=1,
                     help="Gradient smooth loss: suggested range 0.1 to 10")
+parser.add_argument("--dice", type=float,
+                    dest="dice", default=1,
+                    help="Dice loss: suggested range 0.1 to 10")
 parser.add_argument("--checkpoint", type=int,
                     dest="checkpoint", default=4000,
                     help="frequency of saving models")
@@ -43,6 +46,7 @@ bs_ch = opt.bs_ch
 local_ori = opt.local_ori
 n_checkpoint = opt.checkpoint
 smooth = opt.smooth
+dice = opt.dice
 model_name = opt.model_name
 iteration = opt.iteration
 classes = opt.classes
@@ -104,7 +108,7 @@ def train():
 
                 sim = loss_similarity(warps, Y)
                 smo_loss = smo
-                loss = sim + 1 * diceloss + 0.5 * smo_loss
+                loss = sim + dice * diceloss + smooth * smo_loss
                 optimizer.zero_grad()
                 loss.backward()
 
