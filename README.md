@@ -42,7 +42,7 @@ We used four datasets to validate our methods:
 **Abdomen Dataset:** The abdomen dataset comes from Abdomen MR-CT Task in [Learn2Reg](https://learn2reg.grand-challenge.org/Datasets/) challenge.
 
 ## Contact
-If you have any questions, please be feel free to contact us by e-mail (zuopengtan@mail.dlut.edu.cn).
+If you have any questions, please be free to contact us by e-mail (zuopengtan@mail.dlut.edu.cn).
 
 ## Acknowledgements
 Some codes in this repository are modified from [LapIRN](https://github.com/cwmok/LapIRN) and [ULAE](https://github.com/wanghaostu/ULAE-net).
