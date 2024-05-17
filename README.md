@@ -1,5 +1,5 @@
 # GroupMorph: Medical Image Registration via Grouping Network with Contextual Fusion
-This is the official Pytorch implementation of "GroupMorph: Medical Image Registration via Grouping Network with Contextual Fusion".
+This is the official Pytorch implementation of "GroupMorph: Medical Image Registration via Grouping Network with Contextual Fusion. IEEE Transactions on Medical Imaging (TMI), 2024".
 
 Keywords: Deformable image registration, deformation decomposition, contextual feature fusion.
 ## Prerequisites
